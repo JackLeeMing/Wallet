@@ -1,0 +1,44 @@
+{
+  "buildFiles": [
+    "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk",
+    "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/hellomac/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "max-jni-debug-x86": {
+      "buildCommand": "/Users/hellomac/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/build/intermediates/ndkBuild/debug/lib /Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj/local/x86/libmax-jni.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "max-jni",
+      "files": [
+        {
+          "src": "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Max-lib.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/hellomac/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-Wno-error\u003dformat-security\" \"-isystem\" \"/Users/hellomac/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Max.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/hellomac/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-Wno-error\u003dformat-security\" \"-isystem\" \"/Users/hellomac/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/hello-jni.c",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-O2\" \"-DNDEBUG\" \"-I/Users/hellomac/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-Wno-error\u003dformat-security\" \"-isystem\" \"/Users/hellomac/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-x86/usr/include\""
+        }
+      ],
+      "output": "/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj/local/x86/libmax-jni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cCompilerExecutable": "/Users/hellomac/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc",
+      "cppCompilerExecutable": "/Users/hellomac/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-g++"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

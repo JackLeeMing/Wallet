@@ -1,0 +1,28 @@
+
+{
+	"buildFiles" : [ "/Users/hellomac/AndroidStudioProjects/Wallet/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/hellomac/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/cmake/release/mips --target clean"
+	],
+	"libraries" : 
+	{
+		"hello-jni-Release-mips" : 
+		{
+			"abi" : "mips",
+			"artifactName" : "hello-jni",
+			"buildCommand" : "/Users/hellomac/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/cmake/release/mips --target hello-jni",
+			"buildType" : "release",
+			"output" : "/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/cmake/release/obj/mips/libhello-jni.so",
+			"toolchain" : "9030573095242905537"
+		}
+	},
+	"toolchains" : 
+	{
+		"9030573095242905537" : 
+		{
+			"cCompilerExecutable" : "/Users/hellomac/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/hellomac/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

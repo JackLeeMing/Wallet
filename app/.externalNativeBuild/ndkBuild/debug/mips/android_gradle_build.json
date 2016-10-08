@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk",
+    "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/hellomac/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "hello-jni-debug-mips": {
+      "buildCommand": "/Users/hellomac/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/hellomac/AndroidStudioProjects/Wallet/app/build/intermediates/ndkBuild/debug/lib /Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj/local/mips/libhello-jni.so",
+      "toolchain": "toolchain-mips",
+      "abi": "mips",
+      "artifactName": "hello-jni",
+      "files": [
+        {
+          "src": "/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni/hello-jni.c",
+          "flags": "\"-fpic\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-g\" \"-O2\" \"-DNDEBUG\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-I/Users/hellomac/AndroidStudioProjects/Wallet/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/hellomac/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-mips/usr/include\""
+        }
+      ],
+      "output": "/Users/hellomac/AndroidStudioProjects/Wallet/app/.externalNativeBuild/ndkBuild/debug/obj/local/mips/libhello-jni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-mips": {
+      "cCompilerExecutable": "/Users/hellomac/Library/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

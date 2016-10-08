@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="work.android.smartbow.com.wallet.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center|top"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <work.android.smartbow.com.wallet.widget.StyleTextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:background="#ff00ff"
+            android:textSize="20sp"
+            android:textColor="#737272"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"/>
+        <work.android.smartbow.com.wallet.widget.StyleTextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="#e1ae18"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <work.android.smartbow.com.wallet.widget.StyleTextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:text="@string/app_name"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="#21df8d"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+      <ImageView
+          android:id="@+id/coin_iv"
+          android:src="@mipmap/coin"
+          android:layout_width="wrap_content"
+          android:layout_gravity="center"
+          android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="70dp"
+        android:src="@mipmap/version"/>
+
+    <ImageView
+        android:id="@+id/wallet_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/wallet"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dp"
+        android:onClick="start"
+        android:text="start"/>
+
+
+</FrameLayout>

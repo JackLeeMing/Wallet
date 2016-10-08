@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">Wallet</string>
+    <string name="name">JackLeeMing</string>
+    <string name="complexString"><b>我爱你</b>哈哈<i>是你的</i>.<u>什么?</u></string>
+    <string name="complexStr">&lt;b>Stop&lt;/b>.%1$d.</string>
+    <string name="button">Button</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">@android:string/cancel</string>
+    <plurals name="plurals">
+        <item quantity="one">one unicorn</item>
+        <item quantity="other">%d unicorn</item>
+        <item quantity="zero">Zero</item>
+    </plurals>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

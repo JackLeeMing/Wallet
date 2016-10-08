@@ -1,0 +1,4 @@
+# ninja log v5
+1	41	0	CMakeFiles/native-lib.dir/src/main/cpp/Max.cpp.o	f05d73be7d89185b
+0	52	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	cf90d6e6da4398a9
+52	100	0	../obj/x86/libnative-lib.so	b46699e5aa1dec83
