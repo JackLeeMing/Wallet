@@ -9,9 +9,10 @@
 package work.android.smartbow.com.wallet.copy;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import java.util.List;
 import java.util.Random;
@@ -22,13 +23,13 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import work.android.smartbow.com.wallet.R;
-import work.android.smartbow.com.wallet.fragment.NewItemFragment;
-import work.android.smartbow.com.wallet.fragment.SampleFragment;
-import work.android.smartbow.com.wallet.utils.TLog;
 import work.android.smartbow.com.wallet.bean.CMkk;
 import work.android.smartbow.com.wallet.bean.MovieEntity;
+import work.android.smartbow.com.wallet.fragment.NewItemFragment;
 import work.android.smartbow.com.wallet.rxjava.CatService;
 import work.android.smartbow.com.wallet.rxjava.RatData;
+import work.android.smartbow.com.wallet.utils.TLog;
+import work.android.smartbow.com.wallet.widget.SVSView;
 
 public class CMakeActivity extends AppCompatActivity {
 
@@ -53,12 +54,18 @@ public class CMakeActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_cmake);
     TLog.error("Max: "+ maxFromJNI(10,16)+" "+stringFromJNI());
-    Fragment fragment = SampleFragment.newInstance("","");
-    getSupportFragmentManager().beginTransaction().add(R.id.content_layout,fragment,"tag1").commit();
+   // Fragment fragment = SampleFragment.newInstance("","");
+ //   getSupportFragmentManager().beginTransaction().add(R.id.content_layout,fragment,"tag1").commit();
 //    getSupportFragmentManager().beginTransaction().remove(fragment).commit();
 //    getSupportFragmentManager().beginTransaction().replace(R.id.content_layout,fragment,"tagd").commit();
 
-    getSupportFragmentManager().beginTransaction().add(NewItemFragment.newInstace(),NULL_FRAGMENT).commit();
+//    getSupportFragmentManager().beginTransaction().add(NewItemFragment.newInstace(),NULL_FRAGMENT).commit();
+
+    FrameLayout frameLayout = (FrameLayout)findViewById(R.id.content_layout);
+    SVSView svsView = new SVSView(this);
+
+    FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+    frameLayout.addView(svsView,layoutParams);
 
   }
 
