@@ -22,25 +22,27 @@
         android:orientation="horizontal"
         android:layout_height="100dp">
 
-        <work.android.smartbow.com.wallet.widget.MyView
+        <Button
             android:layout_width="match_parent"
             android:onClick="goNext"
             android:layout_weight="1"
-            app:unit_mode="1"
+            android:text="@string/button"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            tools:ignore="ButtonStyle"/>
 
-        <work.android.smartbow.com.wallet.widget.MyView
+        <Button
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:onClick="goNext2"
-            app:unit_mode="3"
+            android:text="@string/cancel_button"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            tools:ignore="ButtonStyle"/>
     </LinearLayout>
 
     <FrameLayout
@@ -48,6 +50,11 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:text="@string/content_str"
+            android:layout_height="wrap_content"/>
     </FrameLayout>
 
 </LinearLayout>

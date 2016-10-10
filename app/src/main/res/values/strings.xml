@@ -15,10 +15,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="content_str">GitHub
-        是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，
-        故名 GitHub。GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web
+        是一个面向开源及私有软件项目的托管平台 http://www.baidu.com ，因为只支持 Git 作为唯一的版本库格式进行托管，
+        故名 GitHub。GitHub 于 2008 年 4 月 10 日正式 18310397518 上线 ljk19901@gmail.com，除了 Git 代码仓库托管及基本的 Web
         管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、
         代码片段分享（Gist）等&#8230;</string>
+
+    <string name="compassView_cardinal_north">N</string>
+    <string name="compassView_cardinal_east">E</string>
+    <string name="compassView_cardinal_south">S</string>
+    <string name="compassView_cardinal_west">W</string>
+
+
+
 
 
 </resources>

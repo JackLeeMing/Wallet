@@ -27,7 +27,7 @@
         <activity
             android:name=".copy.LearnActivity">
         </activity>
-        <activity android:name=".copy.CMakeActivity"
+        <activity android:name=".pm.MainActivity"
                   android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

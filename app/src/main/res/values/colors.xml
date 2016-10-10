@@ -8,4 +8,8 @@
     <color name="notepad_lines">#FF0000FF</color>
     <color name="notepad_margin">#90FF0000</color>
     <color name="notepad_text">#AA0000FF</color>
+
+    <color name="compassView_bg_color">#F555</color>
+    <color name="compassView_marker_color">#AFFF</color>
+    <color name="compassView_text_color">#AFFF</color>
 </resources>

@@ -8,14 +8,19 @@
 
 package work.android.smartbow.com.wallet.copy;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.util.Linkify;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -25,11 +30,9 @@ import rx.schedulers.Schedulers;
 import work.android.smartbow.com.wallet.R;
 import work.android.smartbow.com.wallet.bean.CMkk;
 import work.android.smartbow.com.wallet.bean.MovieEntity;
-import work.android.smartbow.com.wallet.fragment.NewItemFragment;
 import work.android.smartbow.com.wallet.rxjava.CatService;
 import work.android.smartbow.com.wallet.rxjava.RatData;
 import work.android.smartbow.com.wallet.utils.TLog;
-import work.android.smartbow.com.wallet.widget.SVSView;
 
 public class CMakeActivity extends AppCompatActivity {
 
@@ -61,34 +64,55 @@ public class CMakeActivity extends AppCompatActivity {
 
 //    getSupportFragmentManager().beginTransaction().add(NewItemFragment.newInstace(),NULL_FRAGMENT).commit();
 
-    FrameLayout frameLayout = (FrameLayout)findViewById(R.id.content_layout);
-    SVSView svsView = new SVSView(this);
+   // CompassView compassView = (CompassView)findViewById(R.id.compassView);
+    //compassView.setBearing(45);
+     textView = (TextView)findViewById(R.id.textView);
 
-    FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-    frameLayout.addView(svsView,layoutParams);
+
+
 
   }
+  TextView textView;
+
+  class MyMatchFilter implements Linkify.MatchFilter
+  {
+
+    @Override
+    public boolean acceptMatch(CharSequence s, int start, int end) {
+      return (start ==0 || s.charAt(start-1) !='!');
+    }
+  }
+
+  class MyTransFormFilter implements Linkify.TransformFilter
+  {
+
+    @Override
+    public String transformUrl(Matcher match, String url) {
+      return url.toLowerCase().replace(" ","");
+    }
+  }
+
+
+
 
   public void goNext(View view){
 
-    NewItemFragment fragment = (NewItemFragment) getSupportFragmentManager().findFragmentByTag(NULL_FRAGMENT);
-
-    if (fragment != null){
-
-      if (fragment.isFlag()) {
-        fragment.startWOrk();
-      }
+    String baseUri = "http://www.baidu.com";
+    PackageManager manager = getPackageManager();
+    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(baseUri));
+    boolean activityExists = intent.resolveActivity(manager) != null;
+    if (activityExists){
+      int flags = Pattern.CASE_INSENSITIVE;
+      Pattern pattern = Pattern.compile("\\bquake[\\s]?[0-9]+\\b",flags);
+      Linkify.addLinks(textView,pattern,baseUri,new MyMatchFilter(),new MyTransFormFilter());
+    }else {
+      TLog.error("not exist");
     }
-
   }
 
   public void goNext2(View view){
 
-    NewItemFragment fragment = (NewItemFragment) getSupportFragmentManager().findFragmentByTag(NULL_FRAGMENT);
 
-    if (fragment != null){
-      fragment.setFlag(false);
-    }
   }
 
   private void sub() {

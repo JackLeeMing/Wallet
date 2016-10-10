@@ -17,7 +17,9 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.accessibility.AccessibilityEvent;
 
 import work.android.smartbow.com.wallet.R;
 
@@ -29,6 +31,8 @@ import work.android.smartbow.com.wallet.R;
 public class MyView extends View {
 
   private int unit = TypedValue.COMPLEX_UNIT_SP;
+
+  //AccessibilityEventSource
 
   public MyView(Context context) {
     super(context);
@@ -157,4 +161,55 @@ public class MyView extends View {
   public boolean onKeyUp(int keyCode, KeyEvent event) {//如果得到处理 返回true
     return super.onKeyUp(keyCode, event);
   }
+
+  @Override
+  public boolean onKeyLongPress(int keyCode, KeyEvent event) {
+    return super.onKeyLongPress(keyCode, event);
+  }
+
+  @Override
+  public boolean onKeyShortcut(int keyCode, KeyEvent event) {
+    return super.onKeyShortcut(keyCode, event);
+  }
+
+  @Override
+  public boolean onKeyMultiple(int keyCode, int repeatCount, KeyEvent event) {
+    return super.onKeyMultiple(keyCode, repeatCount, event);
+  }
+
+  @Override
+  public void setOnKeyListener(OnKeyListener l) {
+    super.setOnKeyListener(l);
+  }
+
+  @Override
+  public boolean onKeyPreIme(int keyCode, KeyEvent event) {
+    return super.onKeyPreIme(keyCode, event);
+  }
+
+  @Override
+  public boolean onTrackballEvent(MotionEvent event) {
+    return super.onTrackballEvent(event);
+  }
+
+  @Override
+  public boolean onTouchEvent(MotionEvent event) {
+    return super.onTouchEvent(event);
+  }
+
+  public void setUnit(int unit){
+    this.unit  = unit;
+    sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED);
+  }
+
+
+  //定制可访问事件属性
+  @Override
+  public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
+    super.dispatchPopulateAccessibilityEvent(event);
+
+    return super.dispatchPopulateAccessibilityEvent(event);
+  }
+
+
 }
