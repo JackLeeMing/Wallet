@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+    <ToggleButton
+        android:id="@+id/toggleBtn"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:textOff="@string/btn_start"
+        android:layout_centerHorizontal="true"
+        android:textOn="@string/btn_stop"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/urlText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleBtn"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_WFS_web"
+        android:layout_below="@id/urlText"
+        android:layout_width="match_parent"
+        android:text="@string/button"
+        android:onClick="start"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:layout_below="@id/btn_WFS_web"
+        android:id="@+id/web_WFS_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

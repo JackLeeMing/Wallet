@@ -18,10 +18,12 @@ import rx.Observable;
  * name: Wallet.
  */
 
- interface MovieService {
+public interface MovieService {
   @GET("top250")
   Observable<MovieEntity> getTopMovie(@Query("start")int start,@Query("count")int count);
 
  @GET("top250")
- Call<MovieEntity> getTopMovie2(@Query("start") int start, @Query("count")int count);
+ Call<MovieEntity> getTopMovie2(@Query("start") int start, @Query("count") int count);
+
+
 }

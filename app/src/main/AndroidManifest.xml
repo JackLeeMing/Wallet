@@ -2,16 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="work.android.smartbow.com.wallet">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- SD卡写权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <!-- 使用相机 -->
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <permission android:name="com.data.GET_PROVIDER"
+        android:label="provider permission"
+        android:protectionLevel="normal"/>
 
     <application
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,17 +30,44 @@
             android:name=".web.WebActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:screenOrientation="landscape"/>
-        <activity
-            android:name=".copy.LearnActivity">
+        <activity android:name=".copy.LearnActivity">
         </activity>
-        <activity android:name=".pm.MainActivity"
-                  android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity
+            android:name=".webserver.WFSActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+
+        </activity>
+
+        <service android:name=".webserver.WebService"/>
+
+        <activity android:name=".Main3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".error.DefaultErrorActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:process=":error_activity"
+            android:screenOrientation="portrait"/>
+
+        <provider
+            android:authorities="com.android.smartbow.work.wallet"
+            android:exported="true"
+            android:permission="com.data.GET_PROVIDER"
+            android:name=".db.MyContentProvider"/>
+
+        <provider
+            android:authorities="com.lijiakui.provider.NoteProvider"
+            android:exported="true"
+            android:permission="com.data.GET_PROVIDER"
+            android:name=".db.NoteContentProvider"/>
+
+
+
     </application>
 
 </manifest>

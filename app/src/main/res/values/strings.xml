@@ -24,9 +24,14 @@
     <string name="compassView_cardinal_east">E</string>
     <string name="compassView_cardinal_south">S</string>
     <string name="compassView_cardinal_west">W</string>
+    <string name="btn_start">开始</string>
+    <string name="btn_stop">停止</string>
+    <string name="msg_net_off">未连接上网络</string>
 
-
-
+    <string name="btn_start1">开始1</string>
+    <string name="btn_start2">开始2</string>
+    <string name="btn_start3">开始3</string>
+    <string name="btn_start4">开始4-close</string>
 
 
 </resources>

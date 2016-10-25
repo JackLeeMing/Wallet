@@ -8,9 +8,12 @@
 
 package work.android.smartbow.com.wallet.activity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -31,7 +34,18 @@ import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Map;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import work.android.smartbow.com.wallet.R;
+import work.android.smartbow.com.wallet.utils.TLog;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -102,5 +116,24 @@ public class Main2Activity extends AppCompatActivity {
    textView.setText(msp);
    textView.setMovementMethod(LinkMovementMethod.getInstance());
 
+   SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+
+   SharedPreferences.Editor editor = preferences.edit();
+   editor.putBoolean("key1",true);
+   editor.putString("key2","str");
+   Map<String,?> maps = preferences.getAll();
+   boolean con = preferences.contains("key1");
+
+   editor.apply();
+
+
+   boolean flag  = preferences.getBoolean("key1",false);
+
+   if (flag){
+    TLog.error("key1");
+   }
   }
+
+
+
 }

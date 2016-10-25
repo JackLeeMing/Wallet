@@ -1,1 +1,1 @@
-include ':app',':tmlibrary'
+include ':app', ':tmlibrary', ':netlibrary'

@@ -25,6 +25,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -63,4 +64,8 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
     compile project(':tmlibrary')
+    //compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.2.6'
+    //compile 'org.apache.httpcomponents:httpmime:4.5.2'
+    compile 'org.apache.httpcomponents:httpcore:4.4.5'
+
 }
